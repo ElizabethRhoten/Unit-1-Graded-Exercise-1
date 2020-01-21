@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Unit 1 Graded Exercise 1</title>
+<link href="styles.css" rel="stylesheet" />
+<script src="modernizr.custom.05819.js"></script>
+<script>
+	function Msg1()
+	{
+		var homeMsg = "You selected the Home Address";
+		window.alert(homeMsg);
+	}
+	function Msg2()
+	{
+		var workMsg = "You selected the Work Address";
+		window.alert(workMsg);
+	}
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>
+			Elizabeth, Graded Exercise 1
+		</h1>
+	</header>
+	
+	<article>
+		<h2>Shipping Address</h2>
+		<form>
+			<fieldset id="addroptions">
+				<legend><span>Choose an address</span></legend>
+				<label for="homeoption" id="homeaddr">
+					<span>Home</span><br/> 
+					100 Main St.<br/>
+					Sicilia, MA 02103
+					<input type="radio" id="homeoption" name="shippingaddr"
+						onclick="Msg1(); document.getElementById('streetinput').value = 
+							'100 Main St.';
+						document.getElementById('cityinput').value = 'Sicilia';
+						document.getElementById('stateinput').value = 'MA';
+						document.getElementById('zipinput').value = '02103';"/>
+				</label>
+				<label for="workoption" id="workaddr">
+					<span>Work</span><br/>
+					15 Columbine Ln.<br/>
+					Crab City, MA 02104	
+					
+					
+				<input type="radio" id="workoption" name="shippingaddr"
+						onclick="Msg2(); document.getElementById('streetinput').value = 
+							'15 Columbine Ln.';
+						document.getElementById('cityinput').value = 'Crab City';
+						document.getElementById('stateinput').value = 'MA';
+						document.getElementById('zipinput').value = '02104';"/>
+				</label>
+			</fieldset>
+				<fieldset id="contactinfo">
+					<label for="streetinput">
+						Street Address
+						<input type="text" id="streetinput" />
+					</label>
+					<label for="cityinput">
+						City
+						<input type="text" id="cityinput" />
+					</label>
+					<label for="stateinput">
+						State
+						<input type="text" id="stateinput" />
+					</label>
+					<label for="zipinput">
+						Zip
+						<input type="text" id="zipinput" />
+					</label>
+			</fieldset>
+		</form>
+	</article>
+</body>
+</html>
+					
